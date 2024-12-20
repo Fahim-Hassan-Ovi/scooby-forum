@@ -4,7 +4,7 @@ const loadAllPosts = async (category) => {
 
     // way-2
     // console.log(`https://openapi.programming-hero.com/api/retro-forum/posts${category?`?category=${category}`:''}`);
-
+    document.getElementById("post-container").innerHTML = "";
     const response = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts${category ? `?category=${category}` : ''}`)
     const data = await response.json()
     displayAllPost(data.posts);
@@ -27,7 +27,7 @@ const displayAllPost = (posts) => {
             </div>
             <div class="space-y-4 w-full">
               <div class="flex gap-4 *:opacity-60">
-                <p># category</p>
+                <p># ${post.category}</p>
                 <p>Author: ${post.author.name}</p>
               </div>
               <h3 class="text-2xl font-bold opacity-70 ">
