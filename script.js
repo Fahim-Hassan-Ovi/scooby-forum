@@ -28,28 +28,28 @@ const displayAllPost = (posts) =>{
             <div class="space-y-4 w-full">
               <div class="flex gap-4 *:opacity-60">
                 <p># category</p>
-                <p>Author: author.name</p>
+                <p>Author: ${post.author.name}</p>
               </div>
               <h3 class="text-2xl font-bold opacity-70 ">
-                title
+                ${post.title}
               </h3>
               <p class="opacity-40">
-                description
+                ${post.description}
               </p>
               <hr class="border border-dashed border-gray-300">
               <div class="flex justify-between *:font-bold [&>*:not(:last-child)]:opacity-45">
                 <div class="flex gap-4 ">
                   <div class="space-x-2 flex items-center">
                     <i class="fa-regular fa-comment-dots"></i>
-                    <p>comment_count</p>
+                    <p>${post.comment_count}</p>
                   </div>
                   <div class="space-x-2 flex items-center">
                     <i class="fa-regular fa-eye"></i>
-                    <p>view_count</p>
+                    <p>${post.view_count}</p>
                   </div>
                   <div class="space-x-2 flex items-center">
                     <i class="fa-regular fa-clock"></i>
-                    <p>posted_time Min</p>
+                    <p>${post.posted_time} Min</p>
                   </div>
                 </div>
                 <div class="opacity-100">
